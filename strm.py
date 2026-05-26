@@ -136,14 +136,14 @@ if uploaded:
 
     # Top-3 variantlar
     st.divider()
-    st.subheader("Топ-3 варианта")
+    # st.subheader("Топ-3 варианта")
 
-    for v in result['variants']:
-        medal = ["🥇", "🥈", "🥉"][v['rank'] - 1]
-        with st.expander(f"{medal} Вариант {v['rank']} — вероятность {v['weight']}%"):
-            c1, c2, c3 = st.columns(3)
-            c1.metric("Широта",     v['latitude'])
-            c2.metric("Долгота",    v['longitude'])
-            c3.metric("Направление", f"{v['bearing']}°")
-            url = f"https://maps.google.com/?q={v['latitude']},{v['longitude']}"
-            st.link_button("📍 Открыть на карте", url, use_container_width=True)
+    # for v in result['variants']:
+    #     medal = ["🥇", "🥈", "🥉"][v['rank'] - 1]
+    #     with st.expander(f"{medal} Вариант {v['rank']} — вероятность {v['weight']}%"):
+    #         c1, c2, c3 = st.columns(3)
+    #         c1.metric("Широта",     v['latitude'])
+    #         c2.metric("Долгота",    v['longitude'])
+    #         c3.metric("Направление", f"{v['bearing']}°")
+    #         url = f"https://maps.google.com/?q={v['latitude']},{v['longitude']}"
+    #         st.link_button("📍 Открыть на карте", url, use_container_width=True)
